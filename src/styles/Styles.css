@@ -1,0 +1,13 @@
+.sidebar{
+background-color:black;
+float:left;
+height:650px;
+color:white;
+text-align: left;
+font-size: x-large;
+
+}
+.Nav{
+padding:100px;
+border-bottom: 10px;
+}
