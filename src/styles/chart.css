@@ -1,0 +1,130 @@
+.chart {
+  /*margin-left: 40px;*/
+  max-width: 1340px;
+  padding: 20px;
+}
+.Dashboard-Title {
+  margin-top: 10px;
+  border-radius: 10px;
+  text-align: left;
+}
+/*.react-datepicker-wrapper input {
+  border: none;
+  background-color: #f3f3f3;
+  width: 85%;
+}*/
+.CardContent {
+  background-color: white;
+  width: 191px;
+  margin-left: 3px;
+  height: 108px;
+}
+.CardContent span {
+  font-size: 13px;
+}
+.chartheader h2 {
+  padding-bottom: -4px;
+}
+/*.seconddatepicker input {
+  margin-left: -73px;
+}*/
+.goButton {
+  height: fit-content;
+}
+.goButton button {
+  height: 32px;
+  margin-top: 7px;
+  padding-top: 2px;
+}
+.line {
+  border-right: 1 px solid #333;
+}
+.chart .chart1,
+.chart2 {
+  margin-bottom: 20px;
+
+  border-radius: 10px;
+}
+.container {
+  max-width: 1340px;
+}
+
+.FirstDiv {
+  height: 120px;
+  border-radius: 7px;
+  background-color: white;
+  border: none;
+}
+.card {
+  background-color: white;
+  width: 220px;
+  margin-left: 3px;
+  height: 108px;
+}
+.card1 span {
+  font-size: 11px;
+}
+.social_Content {
+  width: 104%;
+  background-color: white;
+  height: 78px;
+}
+.imageRow {
+  width: 104%;
+}
+.card1 .daily_Visit {
+  margin-left: 15px;
+}
+.FirstDiv p {
+  font-size: 20px;
+}
+.FirstDiv .h5 {
+  font-size: 28px;
+  font-weight: bold;
+}
+.Row1,
+.Row2 {
+  margin-bottom: 10px;
+}
+.Row1 {
+  padding-top: 10px;
+}
+.Row4 .SocialMedia {
+  margin-top: 20px;
+}
+.Row4 .SocialMedia i {
+  font-size: 39px;
+}
+.SocialMediaLikes {
+  font-size: 40px;
+}
+.chart .LineChart1 {
+  background-color: white;
+  border-radius: 10px;
+}
+.chart .BarChart1 {
+  background-color: white;
+  border-radius: 10px;
+}
+
+.chartrow4 {
+  background-color: white;
+  border-radius: 10px;
+}
+.socialtext {
+  text-align: left;
+}
+
+.chartheader {
+  padding: 10px;
+
+  border-radius: 10px;
+  text-align: left;
+  margin: 34px 10px -10px -29px;
+}
+.datepicker {
+  padding-top: 5px;
+}
+.react-datepicker-wrapper {
+  margin-top: 8px;
+}

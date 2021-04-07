@@ -1,13 +1,51 @@
-.sidebar{
-background-color:black;
-float:left;
-height:650px;
-color:white;
-text-align: left;
-font-size: x-large;
-
+.sidebar1 {
+  background-color: #293949;
+  /*float:left;*/
+  min-height: calc(100vh);
+  text-align: left;
+  padding: 20px;
+  font-size: large;
+  position: fixed;
+  margin-left: -15px;
 }
-.Nav{
-padding:100px;
-border-bottom: 10px;
+.sidebar .img-title {
+  background-color: black;
+  margin-left: -35px;
+  width: 310px;
+  height: 60px;
+  text-align: center;
+
+  color: white;
+  padding: 12px;
+}
+.statspageanchor {
+  background-color: #202c39;
+}
+
+.sidebar {
+  position: fixed;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #f3f3f3;
+  font-family: "Open-Sans";
+}
+.sidebar1 .tags a {
+  text-decoration: none;
+  padding: 10px;
+  color: white;
+  font-size: 19px;
+  padding: 13px;
+}
+.sidebar1 .tags a i {
+  margin-right: 10px;
+  color: white;
+}
+.sidebar1 a:hover {
+  background-color: #202c39;
+  text-decoration: none;
+}
+.content {
+  background-color: #f3f3f3;
 }
