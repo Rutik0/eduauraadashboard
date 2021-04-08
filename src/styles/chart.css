@@ -72,6 +72,9 @@
 .imageRow {
   width: 104%;
 }
+.imageRow i {
+  color: white;
+}
 .card1 .daily_Visit {
   margin-left: 15px;
 }

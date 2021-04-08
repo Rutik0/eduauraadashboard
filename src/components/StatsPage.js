@@ -85,24 +85,9 @@ export default function StatsPage() {
       } - ${data.getUTCDate()}`
     );
 
-    //date_Array.push(dates1.getUTCFullYear()-dates1.getUTCMonth()-dates1.getUTCDate())
-    //Date
-    //let datecheck = dates1.getDate();
-    //console.log("datecheck", datecheck);
-
-    // var monthName = [];
-    // monthName.push();
-    //let month = months[dates1.getMonth() - 1];
-    //let year = dates1.getYear() + 1900;
-    //console.log(year);
-    //monthName.push(month);
-    //years.push(year);
-    //console.log(years);
-    // if (!monthName.includes(month)) {
-    // }
-    //console.log(monthName);
+    
   });
-  // console.log("outsidescope", monthName);
+ 
 
   let guest_User_Array = [];
   let dates_Array = [];
@@ -430,7 +415,7 @@ export default function StatsPage() {
         label: "REVENUE",
         fill: false,
         lineTension: 0.1,
-        backgroundColor: "",
+        backgroundColor: color,
         borderColor: "rgba(75,192,192,1)",
         borderCapStyle: "butt",
         borderDash: [],
@@ -452,7 +437,7 @@ export default function StatsPage() {
 
   for (var i = 0; i < revenue_Array.length; i++) {
     Revenue.labels.push(final_Date[i]);
-    Revenue.datasets[0].backgroundColor = color;
+    //Revenue.datasets[0].backgroundColor = color;
     Revenue.datasets[0].data.push(revenue_Array[i]);
 
     //  console.log('bd',Bardata.datasets[1].data)
@@ -528,21 +513,21 @@ export default function StatsPage() {
         label: "FACEBOOK LIKES",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor: [],
+        backgroundColor: "#4267B2",
       },
       {
         label: "FACEBOOK UNLIKES",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor: [],
+        backgroundColor:  	'#898F9C',
       },
     ],
   };
 
   for (var i = 0; i < social_Dates_Array.length; i++) {
     fb_Likes_Chart.labels.push(social_Dates_Array[i]);
-    fb_Likes_Chart.datasets[0].backgroundColor.push(color);
-    fb_Likes_Chart.datasets[1].backgroundColor.push(alternate_Color);
+    //fb_Likes_Chart.datasets[0].backgroundColor.push(color);
+   // fb_Likes_Chart.datasets[1].backgroundColor.push(alternate_Color);
     fb_Likes_Chart.datasets[0].data.push(fb_Likes[i]);
     fb_Likes_Chart.datasets[1].data.push(fb_Unlikes[i]);
 
@@ -557,23 +542,23 @@ export default function StatsPage() {
         label: "INSTA FOLLOW",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor: [],
+        backgroundColor: "#8a3ab9",
       },
       {
         label: "INSTA UNFOLLOW",
         data: [],
         borderColor: ["black"],
-        backgroundColor: [],
+        backgroundColor: 'bc2a8d',
       },
     ],
   };
 
   for (var i = 0; i < social_Dates_Array.length; i++) {
     insta_Follow_Chart.labels.push(social_Dates_Array[i]);
-    insta_Follow_Chart.datasets[0].backgroundColor.push(color);
+    //insta_Follow_Chart.datasets[0].backgroundColor.push(color);
     insta_Follow_Chart.datasets[0].data.push(insta_Follow[i]);
     insta_Follow_Chart.datasets[1].data.push(insta_Unfollow[i]);
-    insta_Follow_Chart.datasets[1].backgroundColor.push(alternate_Color);
+    //insta_Follow_Chart.datasets[1].backgroundColor.push(alternate_Color);
     //  console.log('bd',Bardata.datasets[1].data)
   }
 
@@ -585,32 +570,32 @@ export default function StatsPage() {
         label: "TWITTER FOLLOW",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor: [],
+        backgroundColor: "#1DA1F2",
       },
       {
         label: "TWITTER UNFOLLOW",
         data: [],
         borderColor: ["black"],
-        backgroundColor: [],
+        backgroundColor: '#AAB8C2',
       },
       {
         label: "DAILY VISIT",
         data: [],
         borderColor: ["black"],
-        backgroundColor: [],
+        backgroundColor: '#657786',
       },
     ],
   };
 
   for (var i = 0; i < social_Media.length; i++) {
     twitter_Chart.labels.push(social_Dates_Array[i]);
-    twitter_Chart.datasets[0].backgroundColor.push(color);
+    //twitter_Chart.datasets[0].backgroundColor.push(color);
 
     twitter_Chart.datasets[0].data.push(twitter_Follow[i]);
     twitter_Chart.datasets[1].data.push(twitter_Unfollow[i]);
     twitter_Chart.datasets[2].data.push(daily_Visit_Array[i]);
-    twitter_Chart.datasets[1].backgroundColor.push(alternate_Color);
-    twitter_Chart.datasets[2].backgroundColor.push(alternate_Color);
+    //twitter_Chart.datasets[1].backgroundColor.push(alternate_Color);
+    //twitter_Chart.datasets[2].backgroundColor.push(alternate_Color);
   }
 
   //  console.log('bd',Bardata.datasets[1].data)
@@ -623,23 +608,23 @@ export default function StatsPage() {
         label: "YOUTUBE LIKES",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor: [],
+        backgroundColor: "#FF0000",
       },
       {
         label: "YOUTUBE UNLIKES",
         data: [],
         borderColor: ["black"],
-        backgroundColor: [],
+        backgroundColor: "#657786",
       },
     ],
   };
 
   for (var i = 0; i < social_Dates_Array.length; i++) {
     yt_Chart.labels.push(social_Dates_Array[i]);
-    yt_Chart.datasets[0].backgroundColor.push(color);
+    //yt_Chart.datasets[0].backgroundColor.push(color);
     yt_Chart.datasets[0].data.push(yt_Likes[i]);
     yt_Chart.datasets[1].data.push(yt_Unlikes[i]);
-    yt_Chart.datasets[1].backgroundColor.push(alternate_Color);
+    //yt_Chart.datasets[1].backgroundColor.push(alternate_Color);
     //  console.log('bd',Bardata.datasets[1].data)
   }
 
@@ -899,7 +884,7 @@ export default function StatsPage() {
 
             <Col lg={3}>
               <Row className="imageRow">
-                <Col style={{ backgroundColor: "violet", height: "50px" }}>
+                <Col style={{ backgroundColor: "#8a3ab9", height: "50px" }}>
                   <i
                     class="fa fa-instagram"
                     style={{
