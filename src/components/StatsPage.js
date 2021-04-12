@@ -413,14 +413,18 @@ export default function StatsPage() {
   useEffect(() => {
     async function fetchData() {
       const request = await Axios.get(
-        `https://backend-eduaura-node.herokuapp.com/dashboard?&date1=${selecteddate1}&date2=${selecteddate2}`
+        `http://localhost:3002/dashboard?&date1=${selecteddate1}&date2=${selecteddate2}`
       );
 
       /* console.log("month",request.data.dates.getUTCMonth())*/
       updatedres(request.data[0]);
+      console.log(request.data[0]);
       updatedrevenue(request.data[1]);
+      console.log(request.data[1]);
       updated_Social_Media(request.data[2]);
+      console.log(request.data[2]);
       updated_Demo(request.data[3]);
+      console.log(request.data[3]);
 
       return request;
       /*.then((res) => {
