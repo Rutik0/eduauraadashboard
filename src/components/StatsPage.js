@@ -84,10 +84,7 @@ export default function StatsPage() {
         data.getUTCMonth() + 1
       } - ${data.getUTCDate()}`
     );
-
-    
   });
- 
 
   let guest_User_Array = [];
   let dates_Array = [];
@@ -221,8 +218,8 @@ export default function StatsPage() {
   });
   //COST PER SUBSCRIBER
   resp.map((data) => {
-    cps_Array.push(data.Cps);
-    cps = data.Cps + cps;
+    cps_Array.push(data.cps);
+    cps = data.cps + cps;
   });
   //AVERAGE TIME SPENT
   resp.map((data) => {
@@ -252,6 +249,7 @@ export default function StatsPage() {
   let yt_Unlikes_Total = 0;
   let daily_Visit_Total = 0;
   let daily_Visit_Array = [];
+  let insta_Post = [];
   social_Media.map((data) => {
     twitter_Follow_Total = data.twitter_Follow + twitter_Follow_Total;
     twitter_Likes_Total = data.twitter_Likes + twitter_Likes_Total;
@@ -273,7 +271,126 @@ export default function StatsPage() {
     yt_Likes.push(data.youtube);
     yt_Unlikes.push(data.yt_Unlikes);
     daily_Visit_Array.push(data.daily_Visit);
+    insta_Post.push(data.insta_Post);
   });
+  twitter(twitter_Follow_Total, twitter_Likes_Total, daily_Visit_Total);
+  fb(fb_Follow_Total, fb_Likes_Total);
+  yt(yt_Likes_Total, yt_Unlikes_Total);
+  insta(insta_Likes_Total, insta_Follow_Total);
+  function twitter(follow, likes, visit) {
+    if (follow >= 1000000000) {
+      twitter_Follow_Total =
+        (follow / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (follow >= 1000000) {
+      twitter_Follow_Total =
+        (follow / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (follow >= 1000) {
+      twitter_Follow_Total =
+        (follow / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+
+    if (likes >= 1000000000) {
+      twitter_Likes_Total =
+        (likes / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (likes >= 1000000) {
+      twitter_Likes_Total =
+        (likes / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (likes >= 1000) {
+      twitter_Likes_Total = (likes / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+
+    if (visit >= 1000000000) {
+      daily_Visit_Total =
+        (visit / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (visit >= 1000000) {
+      daily_Visit_Total =
+        (visit / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (visit >= 1000) {
+      daily_Visit_Total = (visit / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+  }
+
+  function fb(follow, likes) {
+    if (follow >= 1000000000) {
+      fb_Follow_Total =
+        (follow / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (follow >= 1000000) {
+      fb_Follow_Total = (follow / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (follow >= 1000) {
+      fb_Follow_Total = (follow / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+
+    if (likes >= 1000000000) {
+      fb_Likes_Total =
+        (likes / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (likes >= 1000000) {
+      fb_Likes_Total = (likes / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (likes >= 1000) {
+      fb_Likes_Total = (likes / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+  }
+
+  function yt(likes, follow) {
+    if (follow >= 1000000000) {
+      yt_Unlikes_Total =
+        (follow / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (follow >= 1000000) {
+      yt_Unlikes_Total =
+        (follow / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (follow >= 1000) {
+      yt_Unlikes_Total = (follow / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+
+    if (likes >= 1000000000) {
+      yt_Likes_Total =
+        (likes / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (likes >= 1000000) {
+      yt_Likes_Total = (likes / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (likes >= 1000) {
+      yt_Likes_Total = (likes / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+  }
+
+  function insta(likes, follow) {
+    if (follow >= 1000000000) {
+      insta_Follow_Total =
+        (follow / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (follow >= 1000000) {
+      insta_Follow_Total =
+        (follow / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (follow >= 1000) {
+      insta_Follow_Total = (follow / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+
+    if (likes >= 1000000000) {
+      insta_Likes_Total =
+        (likes / 1000000000).toFixed(1).replace(/\.0$/, "") + "G";
+    }
+    if (likes >= 1000000) {
+      insta_Likes_Total =
+        (likes / 1000000).toFixed(1).replace(/\.0$/, "") + "M";
+    }
+    if (likes >= 1000) {
+      insta_Likes_Total = (likes / 1000).toFixed(1).replace(/\.0$/, "") + "K";
+    }
+  }
+  console.log(fb_Likes_Total);
   let social_Dates_Array = [];
   social_Media_Array.map((data) => {
     social_Dates_Array.push(
@@ -296,7 +413,7 @@ export default function StatsPage() {
   useEffect(() => {
     async function fetchData() {
       const request = await Axios.get(
-        `http://localhost:3002/dashboard?&date1=${selecteddate1}&date2=${selecteddate2}`
+        `https://backend-eduaura-node.herokuapp.com/dashboard?&date1=${selecteddate1}&date2=${selecteddate2}`
       );
 
       /* console.log("month",request.data.dates.getUTCMonth())*/
@@ -383,7 +500,7 @@ export default function StatsPage() {
 
     //  console.log('bd',Bardata.datasets[1].data)
   }
-
+  console.log(guest_User_Array);
   //NO OF SUBSCRIBERS Graph
   const subscriber_Chart = {
     labels: [],
@@ -519,7 +636,7 @@ export default function StatsPage() {
         label: "FACEBOOK UNLIKES",
         data: [],
         borderColor: ["rgba(255,209,86,1)"],
-        backgroundColor:  	'#898F9C',
+        backgroundColor: "#898F9C",
       },
     ],
   };
@@ -527,7 +644,7 @@ export default function StatsPage() {
   for (var i = 0; i < social_Dates_Array.length; i++) {
     fb_Likes_Chart.labels.push(social_Dates_Array[i]);
     //fb_Likes_Chart.datasets[0].backgroundColor.push(color);
-   // fb_Likes_Chart.datasets[1].backgroundColor.push(alternate_Color);
+    // fb_Likes_Chart.datasets[1].backgroundColor.push(alternate_Color);
     fb_Likes_Chart.datasets[0].data.push(fb_Likes[i]);
     fb_Likes_Chart.datasets[1].data.push(fb_Unlikes[i]);
 
@@ -545,10 +662,10 @@ export default function StatsPage() {
         backgroundColor: "#8a3ab9",
       },
       {
-        label: "INSTA UNFOLLOW",
+        label: "INSTA POST",
         data: [],
         borderColor: ["black"],
-        backgroundColor: 'bc2a8d',
+        backgroundColor: "bc2a8d",
       },
     ],
   };
@@ -557,7 +674,7 @@ export default function StatsPage() {
     insta_Follow_Chart.labels.push(social_Dates_Array[i]);
     //insta_Follow_Chart.datasets[0].backgroundColor.push(color);
     insta_Follow_Chart.datasets[0].data.push(insta_Follow[i]);
-    insta_Follow_Chart.datasets[1].data.push(insta_Unfollow[i]);
+    insta_Follow_Chart.datasets[1].data.push(insta_Post[i]);
     //insta_Follow_Chart.datasets[1].backgroundColor.push(alternate_Color);
     //  console.log('bd',Bardata.datasets[1].data)
   }
@@ -576,13 +693,13 @@ export default function StatsPage() {
         label: "TWITTER UNFOLLOW",
         data: [],
         borderColor: ["black"],
-        backgroundColor: '#AAB8C2',
+        backgroundColor: "#AAB8C2",
       },
       {
         label: "DAILY VISIT",
         data: [],
         borderColor: ["black"],
-        backgroundColor: '#657786',
+        backgroundColor: "#657786",
       },
     ],
   };
@@ -849,7 +966,7 @@ export default function StatsPage() {
               <Row className="social_Content">
                 <Col lg={6}>
                   <h5>{yt_Unlikes_Total}</h5>
-                  <span>FOLLOWERS</span>
+                  <span>FOLLOW</span>
                 </Col>
                 <Col lg={6}>
                   <h5>{yt_Likes_Total}</h5>
@@ -957,7 +1074,7 @@ export default function StatsPage() {
         {/*Revenue Line Chart */}
         <Row className="chartheader">
           <Col>
-            <h2>Revenue</h2>
+            <h2>REVENUE</h2>
           </Col>
         </Row>
         <div className="chartrow4">
