@@ -2,12 +2,8 @@ import { React, useState, useEffect } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { Line, Bar, Pie } from "react-chartjs-2";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-import Card from "react-bootstrap/card";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+
 import { GoogleMapReact } from "google-map-react";
 import "../styles/chart.css";
 import Axios from "axios";
